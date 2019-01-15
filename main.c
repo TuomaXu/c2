@@ -1,7 +1,12 @@
 #include <stdio.h>
 
+//定义全局变量
+char arr[1024];//保存敏感字符
+int index = 0;//敏感字符在数组中的储存为主
+
 int main()
 {
+
 
     printf("敏感字符管理系统\n");
 
@@ -19,8 +24,21 @@ int main()
         scanf("%d",&code);
 
         if(code == 1){
+            printf("请输入要添加的敏感字符\n");
+            char m;
+            scanf("%c",&m);//这一个scanf是把上一次的回车字符从电脑中取出
+            scanf("%c",&m);//这一行scanf才是真正的取出用户输入的敏感字符
+
+            arr[index] = m;
+            index++;
+
+            printf("添加成功，点击回车继续\n");
+            char x;
+            scanf("%c",&x);
+            scanf("%c",&x);
 
         }
+
         if(code == 2){
             
         }
