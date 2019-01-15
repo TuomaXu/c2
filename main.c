@@ -30,7 +30,7 @@ int main()
             scanf("%c",&m);//这一行scanf才是真正的取出用户输入的敏感字符
 
             arr[index] = m;
-            index++;
+            index++;//逻辑删除：将新内容存到旧内容的为主上，就表示把就内容删除
 
             printf("添加成功，点击回车继续\n");
             char x;
@@ -40,7 +40,15 @@ int main()
         }
 
         if(code == 2){
-            
+            //此处有一个bug，如果当前敏感字符为空，那么删除之后，index的值就为-1
+            printf("删除最后一个敏感字符\n");
+            index--;
+
+            printf("删除成功，点击回车继续\n");
+            char x;
+            scanf("%c",&x);
+            scanf("%c",&x);
+
         }
         if(code == 3){
             
