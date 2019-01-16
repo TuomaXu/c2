@@ -8,6 +8,8 @@ int index = 0;  //敏感字符在数组中的储存为主
 //输入一个字符，
 //如果这个字符是敏感字符，那么这个函数返回真，如果不是，返回假
 
+
+//判断一个字符是不是敏感字符。哪个字符=变量
 int isMingan(char x){
     //这个函数的功能为，判断x变量中的值，是不是敏感字符
     //让x中的值和arr数组中的每一个元素的值，相比
@@ -109,14 +111,16 @@ int main()
                 if(neirong[i] == '\0'){
                     break;
                 }
-
-                if(isMingan(arr[i]) == 1){
+                char x = neirong[i];
+                int r = isMingan(x);
+                if(r == 1){
                     neirong[i] = '*';
                 }
+                // if(isMingan(neirong[i])==1){
+
+                // }
 
                 printf("%c",neirong[i]);
-
-
             }
 
             printf("\n");
